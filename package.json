@@ -1,0 +1,27 @@
+{
+  "name": "verivox_cypress",
+  "version": "1.0.0",
+  "description": "Automation with Cypress",
+  "main": "index.js",
+  "scripts": {
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "cy:npm-build": "npm install",
+    "cy:yarn-build": "yarn install"
+  },
+  "author": "Sijin Mathews",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^16.0.3",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "cypress": "^12.17.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/e2e/**/**/*.js",
+    "html": {
+      "enabled": true,
+      "output": "html-reports/report.html"
+    }
+  }
+}
